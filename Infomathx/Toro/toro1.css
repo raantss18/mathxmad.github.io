@@ -1,0 +1,180 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    body{
+    background-color: rgba(9, 173, 202, 0.729);
+    margin: 0;
+    }
+    :root{
+    --bar-width:60px;
+    --bar-height: 8px;
+    --humburger-gap :6px;
+    --foreground:#333;
+    --background:white;
+    --humburger-margin:5px;
+    --animation-timing:200ms ease-in-out ;
+    --humburger-height: calc(var(--bar-height) *3 + var(--humburger-gap) *2); }
+    .menu{
+    --x-width: calc(var(--bar-height) * 1.41421356237);
+    display: flex;
+    flex-direction: column;
+    gap: var(--humburger-gap);
+    
+    width: max-content;
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+    }
+    .menu:has(input:checked){
+    --foreground: white;
+    --background: #333;
+    }
+    .menu:has(input:focus-visible)::before, .menu:has(input:focus-visible)::after,
+    .menu:has input:focus-visible{
+    border: 1px solid var(--background);
+    box-shadow: 0 0 0 1px var(--background);
+    }
+    .menu::before,
+    .menu::after,
+    .menu input{
+    content: "";
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: var(--foreground);
+    border-radius: 9999px;
+    transform-origin: left center;
+    transition: opacity var(--animation-timing),
+    width var(--animation-timing),
+    rotate var(--animation-timing),
+    translate var(--animation-timing);
+    
+    }
+    .menu:has(input:checked)::before{
+    rotate: 45deg;
+    width: 51px;
+    translate: 0 calc(var(--bar-height)/ -2);
+    }
+    .menu:has(input:checked)::after{
+    rotate: -45deg;
+    width: 51px;
+    translate: 0 calc(var(--bar-height)/ 2);
+    }
+    .menu input{
+    appearance: none;
+    outline: none;
+    pointer-events: none;
+    }
+    .menu input:checked{
+    opacity: 0;
+    width: 0;
+    }
+    .sidebar{
+    transition: translate var(--animation-timing);
+    padding: 0.5rem 1rem;
+    translate: 100%;
+    margin-top: calc(var(--humburger-height) + var(--humburger-margin) + 1rem);
+    background-color: rgb(232, 234, 235);
+    width: 25rem;
+    min-height: 100vh;
+    }
+    .menu:has(input:checked) + .sidebar {
+    translate: -45%;
+    }
+    nav{
+    padding-top: 100px;
+    
+    }
+    nav div{
+    color: var(--foreground);
+    padding-top: 50px;
+    font-size: 18px;
+    font-family: pacifico;
+    font-weight: bolder;
+    }
+    .info{
+    width: 35px;
+    }
+    .voalohany{
+    position: relative;
+    right:40px ;
+    
+    }
+    .faharoa{
+    position: absolute
+    ;
+    }
+    .fitambarany{
+    margin: 5vw;
+    }
+    img{
+    width: 30px;
+    }
+    .titre{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40px;
+    }
+    p{
+    font-size: 25px;
+    color:rgb(248, 252, 254) ;
+    font-weight: bolder;
+    
+    }
+    
+    .sary{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 0;
+    }
+    .cherhe{
+    position: relative;
+    }
+    .recherche{
+    border: none;
+    border-radius: 10px;
+    background-color:rgb(232, 234, 235) ;
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    font-style: italic;
+    padding: 10px;
+    padding-right: 35px;
+    }
+    .cherhe{
+    display: flex;
+    
+    }
+    .cherh{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    
+    }
+    
+    .foto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .bbb{
+    height: 50vh;
+    width: 50vw;
+    }
+    .footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color:rgb(232, 234, 235) ;
+    }
