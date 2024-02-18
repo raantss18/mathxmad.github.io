@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    body{
+    background-color: rgba(9, 173, 202, 0.729);
+    }
+    ul{
+    
+    padding: 40px;
+    border-radius: 30px;
+    background-color:rgb(232, 234, 235);
+    }
+    ul li{
+    font-weight:bolder ;
+    
+    list-style: none;
+    margin: 5px;
+    padding: 3px;
+    color: white;
+    background-color: rgba(9, 173, 202, 0.729);
+    
+    }
+    .foto{
+    
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color:rgb(232, 234, 235) ;
+    }
+    img{
+    width: 30px;
+    }
+    .lieux-univ{
+        text-decoration: none;
+        color: white;
+    }
+    
